@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://images/Background.png" type="Texture" id=1]
 [ext_resource path="res://images/Logo.png" type="Texture" id=2]
@@ -8,8 +8,10 @@
 [ext_resource path="res://images/Planet_Pink_Big.png" type="Texture" id=6]
 [ext_resource path="res://images/Planet_Yellow_Big.png" type="Texture" id=7]
 [ext_resource path="res://images/Planet_Brown_Big.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=9]
 
 [node name="MainMenu" type="Node2D"]
+script = ExtResource( 9 )
 
 [node name="BackgroundImage" type="TextureRect" parent="."]
 margin_right = 1600.0
@@ -87,6 +89,7 @@ margin_bottom = 552.0
 focus_neighbour_top = NodePath("../Button_Exit")
 focus_neighbour_bottom = NodePath("../Button_Settings")
 text = "Play"
+reference_path = "res://Scenes/Game.tscn"
 start_focused = true
 
 [node name="Button_Settings" parent="." instance=ExtResource( 3 )]

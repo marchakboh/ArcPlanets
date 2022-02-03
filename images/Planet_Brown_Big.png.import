@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Logo_ARC.png-460f773db235ab71f604fee5288e2ab6.stex"
+path="res://.import/Planet_Brown_Big.png-94390f5c6ea32d698e09fa8eb8880b8a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Logo_ARC.png"
-dest_files=[ "res://.import/Logo_ARC.png-460f773db235ab71f604fee5288e2ab6.stex" ]
+source_file="res://images/Planet_Brown_Big.png"
+dest_files=[ "res://.import/Planet_Brown_Big.png-94390f5c6ea32d698e09fa8eb8880b8a.stex" ]
 
 [params]
 

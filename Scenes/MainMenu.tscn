@@ -1,17 +1,17 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://images/Background.png" type="Texture" id=1]
-[ext_resource path="res://images/Logo_ARC.png" type="Texture" id=2]
-[ext_resource path="res://images/Logo_PLANETS.png" type="Texture" id=3]
-[ext_resource path="res://images/Planet_Brown.png" type="Texture" id=4]
-[ext_resource path="res://images/Planet_Earth.png" type="Texture" id=5]
-[ext_resource path="res://images/Planet_Purple.png" type="Texture" id=6]
-[ext_resource path="res://images/Planet_Pink.png" type="Texture" id=7]
-[ext_resource path="res://images/Planet_Yellow.png" type="Texture" id=8]
+[ext_resource path="res://images/Logo.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Button_Menu.tscn" type="PackedScene" id=3]
+[ext_resource path="res://images/Planet_Purple_Big.png" type="Texture" id=4]
+[ext_resource path="res://images/Planet_Earth_Big.png" type="Texture" id=5]
+[ext_resource path="res://images/Planet_Pink_Big.png" type="Texture" id=6]
+[ext_resource path="res://images/Planet_Yellow_Big.png" type="Texture" id=7]
+[ext_resource path="res://images/Planet_Brown_Big.png" type="Texture" id=8]
 
 [node name="MainMenu" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="BackgroundImage" type="TextureRect" parent="."]
 margin_right = 1600.0
 margin_bottom = 960.0
 texture = ExtResource( 1 )
@@ -19,72 +19,91 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect2" type="TextureRect" parent="."]
-margin_left = 84.0
-margin_top = 78.0
-margin_right = 523.0
-margin_bottom = 270.0
+[node name="Text_Logo" type="TextureRect" parent="."]
+margin_left = 400.0
+margin_top = 52.0
+margin_right = 1371.0
+margin_bottom = 426.0
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect3" type="TextureRect" parent="."]
-margin_left = 195.0
-margin_top = 279.0
-margin_right = 968.0
-margin_bottom = 476.0
-texture = ExtResource( 3 )
+[node name="Planet_Brown" type="TextureRect" parent="."]
+margin_left = 1343.0
+margin_top = 433.0
+margin_right = 1537.0
+margin_bottom = 622.0
+texture = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect4" type="TextureRect" parent="."]
-margin_left = 148.0
-margin_top = 604.0
-margin_right = 228.0
-margin_bottom = 684.0
-texture = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect5" type="TextureRect" parent="."]
-margin_left = 806.0
-margin_top = 161.0
-margin_right = 886.0
-margin_bottom = 241.0
+[node name="Planet_Earth" type="TextureRect" parent="."]
+margin_left = 225.0
+margin_top = 635.0
+margin_right = 420.0
+margin_bottom = 830.0
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect6" type="TextureRect" parent="."]
-margin_left = 686.0
-margin_top = 484.0
-margin_right = 766.0
-margin_bottom = 564.0
-texture = ExtResource( 7 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect7" type="TextureRect" parent="."]
-margin_left = 1120.0
-margin_top = 807.0
-margin_right = 1200.0
-margin_bottom = 887.0
+[node name="Planet_Pink" type="TextureRect" parent="."]
+margin_left = 1021.0
+margin_top = 731.0
+margin_right = 1206.0
+margin_bottom = 916.0
 texture = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect8" type="TextureRect" parent="."]
-margin_left = 525.0
-margin_top = 785.0
-margin_right = 605.0
-margin_bottom = 865.0
-texture = ExtResource( 8 )
+[node name="Planet_Purple" type="TextureRect" parent="."]
+margin_left = 98.0
+margin_top = 190.0
+margin_right = 293.0
+margin_bottom = 385.0
+texture = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Planet_Yellow" type="TextureRect" parent="."]
+margin_left = 1104.0
+margin_top = 38.0
+margin_right = 1291.0
+margin_bottom = 225.0
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_Play" parent="." instance=ExtResource( 3 )]
+margin_left = 688.0
+margin_top = 480.0
+margin_right = 915.0
+margin_bottom = 552.0
+focus_neighbour_top = NodePath("../Button_Exit")
+focus_neighbour_bottom = NodePath("../Button_Settings")
+text = "Play"
+start_focused = true
+
+[node name="Button_Settings" parent="." instance=ExtResource( 3 )]
+margin_left = 688.0
+margin_top = 584.0
+margin_right = 915.0
+margin_bottom = 656.0
+focus_neighbour_top = NodePath("../Button_Play")
+focus_neighbour_bottom = NodePath("../Button_Exit")
+text = "Settings"
+reference_path = "res://Scenes/Settings.tscn"
+
+[node name="Button_Exit" parent="." instance=ExtResource( 3 )]
+margin_left = 688.0
+margin_top = 688.0
+margin_right = 915.0
+margin_bottom = 760.0
+focus_neighbour_top = NodePath("../Button_Settings")
+focus_neighbour_bottom = NodePath("../Button_Play")
+text = "Exit"

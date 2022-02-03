@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Logo_PLANETS.png-a9ba6e556864d4afc1874fc3b6f9b1ce.stex"
+path="res://.import/Planet_Purple_Big.png-be02278f6c6a5aa81ccbff16c5c54ee0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Logo_PLANETS.png"
-dest_files=[ "res://.import/Logo_PLANETS.png-a9ba6e556864d4afc1874fc3b6f9b1ce.stex" ]
+source_file="res://images/Planet_Purple_Big.png"
+dest_files=[ "res://.import/Planet_Purple_Big.png-be02278f6c6a5aa81ccbff16c5c54ee0.stex" ]
 
 [params]
 

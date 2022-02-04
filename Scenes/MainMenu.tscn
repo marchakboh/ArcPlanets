@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://images/Background.png" type="Texture" id=1]
+[ext_resource path="res://images/Background_Pink.png" type="Texture" id=1]
 [ext_resource path="res://images/Logo.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Button_Menu.tscn" type="PackedScene" id=3]
-[ext_resource path="res://images/Planet_Purple_Big.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/CirclePlanets.tscn" type="PackedScene" id=4]
 [ext_resource path="res://images/Planet_Earth_Big.png" type="Texture" id=5]
 [ext_resource path="res://images/Planet_Pink_Big.png" type="Texture" id=6]
 [ext_resource path="res://images/Planet_Yellow_Big.png" type="Texture" id=7]
@@ -27,56 +27,6 @@ margin_top = 52.0
 margin_right = 1371.0
 margin_bottom = 426.0
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Planet_Brown" type="TextureRect" parent="."]
-margin_left = 1343.0
-margin_top = 433.0
-margin_right = 1537.0
-margin_bottom = 622.0
-texture = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Planet_Earth" type="TextureRect" parent="."]
-margin_left = 225.0
-margin_top = 635.0
-margin_right = 420.0
-margin_bottom = 830.0
-texture = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Planet_Pink" type="TextureRect" parent="."]
-margin_left = 1021.0
-margin_top = 731.0
-margin_right = 1206.0
-margin_bottom = 916.0
-texture = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Planet_Purple" type="TextureRect" parent="."]
-margin_left = 98.0
-margin_top = 190.0
-margin_right = 293.0
-margin_bottom = 385.0
-texture = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Planet_Yellow" type="TextureRect" parent="."]
-margin_left = 1104.0
-margin_top = 38.0
-margin_right = 1291.0
-margin_bottom = 225.0
-texture = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -110,3 +60,43 @@ margin_bottom = 760.0
 focus_neighbour_top = NodePath("../Button_Settings")
 focus_neighbour_bottom = NodePath("../Button_Play")
 text = "Exit"
+
+[node name="Planet_Purple" parent="." instance=ExtResource( 4 )]
+margin_left = 98.0
+margin_top = 203.0
+margin_right = 293.0
+margin_bottom = 398.0
+related_path = "res://images/Background_Purple.png"
+
+[node name="Planet_Earth" parent="." instance=ExtResource( 4 )]
+margin_left = 235.0
+margin_top = 645.0
+margin_right = 430.0
+margin_bottom = 840.0
+texture = ExtResource( 5 )
+related_path = "res://images/Background_Earth.png"
+
+[node name="Planet_Pink" parent="." instance=ExtResource( 4 )]
+margin_left = 1021.0
+margin_top = 713.0
+margin_right = 1216.0
+margin_bottom = 908.0
+texture = ExtResource( 6 )
+is_selected = true
+related_path = "res://images/Background_Pink.png"
+
+[node name="Planet_Brown" parent="." instance=ExtResource( 4 )]
+margin_left = 1336.0
+margin_top = 431.0
+margin_right = 1531.0
+margin_bottom = 626.0
+texture = ExtResource( 8 )
+related_path = "res://images/Background_Brown.png"
+
+[node name="Planet_Yellow" parent="." instance=ExtResource( 4 )]
+margin_left = 1113.0
+margin_top = 46.0
+margin_right = 1308.0
+margin_bottom = 241.0
+texture = ExtResource( 7 )
+related_path = "res://images/Background_Yellow.png"

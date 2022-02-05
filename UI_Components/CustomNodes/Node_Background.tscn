@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://images/Background_Pink.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Script_Background.gd" type="Script" id=3]
+[ext_resource path="res://images/Stars.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/ScrollingScript.gd" type="Script" id=5]
+
+[sub_resource type="Shader" id=3]
+code = "shader_type canvas_item;
+uniform float scroll_speed;
+void fragment() {
+	vec2 shifteduv = UV;
+	shifteduv.y -= TIME * scroll_speed;
+	vec4 col = texture(TEXTURE, shifteduv);
+	COLOR = col;
+}"
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = SubResource( 3 )
+shader_param/scroll_speed = null
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1600.0
+margin_bottom = 960.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+material = SubResource( 4 )
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 4 )
+stretch_mode = 2
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

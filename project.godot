@@ -11,13 +11,25 @@ config_version=4
 [application]
 
 config/name="Arc Planets"
-run/main_scene="res://Scenes/MainMenu.tscn"
+run/main_scene="res://UI_Components/Scenes/Scene_MainMenu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+GlobalVariable="*res://Scripts/GlobalVariable.gd"
 
 [display]
 
 window/size/width=1600
 window/size/height=960
+
+[input]
+
+Click={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
 
 [physics]
 

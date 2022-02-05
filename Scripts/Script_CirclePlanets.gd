@@ -3,6 +3,7 @@ extends TextureRect
 export(bool) var is_selected = false
 export var background_path = ""
 export var planet_path = ""
+export var planet_player = ""
 
 var sprites = []
 

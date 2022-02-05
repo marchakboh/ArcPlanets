@@ -340,6 +340,7 @@ margin_right = 293.0
 margin_bottom = 398.007
 background_path = "res://images/Background_Purple.png"
 planet_path = "res://images/Planet_Purple.png"
+planet_player = "res://images/Player_Purple.png"
 
 [node name="Planet_Earth" parent="." instance=ExtResource( 3 )]
 margin_left = 235.0
@@ -349,6 +350,7 @@ margin_bottom = 840.0
 texture = ExtResource( 9 )
 background_path = "res://images/Background_Earth.png"
 planet_path = "res://images/Planet_Earth.png"
+planet_player = "res://images/Player_Earth.png"
 
 [node name="Planet_Pink" parent="." instance=ExtResource( 3 )]
 margin_left = 1021.0
@@ -359,6 +361,7 @@ texture = ExtResource( 5 )
 is_selected = true
 background_path = "res://images/Background_Pink.png"
 planet_path = "res://images/Planet_Pink.png"
+planet_player = "res://images/Player_Pink.png"
 
 [node name="Planet_Brown" parent="." instance=ExtResource( 3 )]
 margin_left = 1336.0
@@ -368,6 +371,7 @@ margin_bottom = 625.979
 texture = ExtResource( 6 )
 background_path = "res://images/Background_Brown.png"
 planet_path = "res://images/Planet_Brown.png"
+planet_player = "res://images/Player_Brown.png"
 
 [node name="Planet_Yellow" parent="." instance=ExtResource( 3 )]
 margin_left = 1132.0
@@ -377,6 +381,7 @@ margin_bottom = 249.0
 texture = ExtResource( 7 )
 background_path = "res://images/Background_Yellow.png"
 planet_path = "res://images/Planet_Yellow.png"
+planet_player = "res://images/Player_Yellow.png"
 
 [node name="Text_Logo" type="TextureRect" parent="."]
 margin_left = 400.0

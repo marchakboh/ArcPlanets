@@ -32,6 +32,7 @@ func initialize():
 
 
 func _on_Button_Play_pressed():
+	#GlobalVariable.reset_variables()
 	$AnimationPlayer.play("down_animation")
 
 

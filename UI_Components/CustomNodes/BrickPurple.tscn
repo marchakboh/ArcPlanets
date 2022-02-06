@@ -1,0 +1,83 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://images/Sprite_Type_1.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Brick.gd" type="Script" id=2]
+[ext_resource path="res://UI_Components/CustomNodes/Explosion.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/BrickScript.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 17, 20.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 18.5, 22.5 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 46, 18.5 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 20, 22 )
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "die_animation"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.1, 0.1 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+rotation = 1.5708
+script = ExtResource( 4 )
+
+[node name="Brick" type="StaticBody2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Brick"]
+texture = ExtResource( 1 )
+
+[node name="CollisionPurple" type="CollisionShape2D" parent="Brick"]
+position = Vector2( 0, -7.5 )
+shape = SubResource( 1 )
+
+[node name="CollisionGreen" type="CollisionShape2D" parent="Brick"]
+position = Vector2( -0.500001, -1.5 )
+shape = SubResource( 4 )
+
+[node name="CollisionRed" type="CollisionShape2D" parent="Brick"]
+position = Vector2( -1.5299e-07, -3.5 )
+shape = SubResource( 5 )
+
+[node name="CollisionYellow" type="CollisionShape2D" parent="Brick"]
+position = Vector2( -1, -6 )
+shape = SubResource( 6 )
+
+[node name="Node2D" parent="Brick" instance=ExtResource( 3 )]
+position = Vector2( -3.49691e-07, -8 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Brick"]
+anims/RESET = SubResource( 2 )
+anims/die_animation = SubResource( 3 )
+
+[connection signal="animation_finished" from="Brick/AnimationPlayer" to="Brick" method="_on_AnimationPlayer_animation_finished"]

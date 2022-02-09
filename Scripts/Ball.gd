@@ -39,3 +39,6 @@ func reset():
 
 func _on_Timer_timeout():
 	pass
+
+func change_sprite(path):
+	$Ball/Sprite.texture = load(path)

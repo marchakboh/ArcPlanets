@@ -81,6 +81,7 @@ func _physics_process(delta):
 			ball = ball_preload.instance()
 			ball.position.x = 400
 			ball.position.y = 490
+			ball.change_sprite(GlobalVariable.selected_planet_path)
 			add_child(ball)
 
 func _on_AnimationPlayer_animation_finished(anim_name):
@@ -89,6 +90,7 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		ball = ball_preload.instance()
 		ball.position.x = $Player.position.x + 45
 		ball.position.y = $Player.position.y - 5
+		ball.change_sprite(GlobalVariable.selected_planet_path)
 		add_child(ball)
 
 

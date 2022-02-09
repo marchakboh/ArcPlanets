@@ -21,6 +21,7 @@ func _input(event):
 					$Background.change_texture(planet.background_path)
 					GlobalVariable.selected_background_path = planet.background_path
 					GlobalVariable.selected_planet_path = planet.planet_path
+					print(GlobalVariable.selected_planet_path)
 					GlobalVariable.selected_player_ui = planet.planet_player
 
 func initialize():
@@ -39,3 +40,7 @@ func _on_Button_Play_pressed():
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "down_animation":
 		get_tree().change_scene("res://UI_Components/Scenes/Scene_Game.tscn")
+
+
+func _on_Button_Exit_pressed():
+	get_tree().quit()
